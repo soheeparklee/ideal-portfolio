@@ -368,3 +368,41 @@ button:focus {
     font-weight: 100;
     font-style: italic;
 }
+
+/* projects */
+#projects {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+  }
+
+  .project_top {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly */
+    gap: 1rem; /* Optional: Adds space between the columns */
+}
+
+.project_left, .project_right {
+    border-radius: 8px;
+    flex: 1; /* Each div takes equal width */
+    background-color: var(--color-primary-variant); /* Optional: Styling */
+    padding: 1rem; /* Optional: Adds padding inside each column */
+}
+
+.project_photos {
+    display: flex;
+    justify-content: space-between; /* Space between the images */
+    gap: 1rem; /* Optional: Adds gap between the boxes */
+}
+
+.project_img_box {
+    flex: 1; /* Each box takes equal width */
+    text-align: center; /* Center-align the image and text */
+
+}
+
+.project_img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Keep image proportions */
+    border-radius: 8px;
+    padding: 5px;
+}
