@@ -393,9 +393,27 @@ button:focus {
 }
 
 .project_desc_list{
+    background-color: var(--color-primary-variant); /* Optional: Styling */
+    filter: brightness(150%);
+    border-radius: 8px;
+    padding: 1rem;
     list-style-type: none;
     text-align: left;
-    margin: 1rem;
+    margin: 0 0 1rem 0;
+}
+
+.project_link{
+    background-color: var(--color-primary); /* Optional: Styling */
+    filter: brightness(150%);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: left;
+}
+
+.project_link_list{
+    text-decoration: underline;
+    margin: 0 1rem;
+    list-style-type: disc;
 }
 
 .project_photos {
