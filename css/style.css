@@ -77,6 +77,10 @@ button:focus {
     margin: 0.5rem 0;
 }
   
+.dates{
+    font-size: 1rem;
+    font-style: italic;
+}
 
 /* Header */
 .header {
@@ -386,6 +390,12 @@ button:focus {
     flex: 1; /* Each div takes equal width */
     background-color: var(--color-primary-variant); /* Optional: Styling */
     padding: 1rem; /* Optional: Adds padding inside each column */
+}
+
+.project_desc_list{
+    list-style-type: none;
+    text-align: left;
+    margin: 1rem;
 }
 
 .project_photos {
