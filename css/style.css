@@ -414,7 +414,11 @@ button:focus {
 .project_link_list{
     text-decoration: underline;
     margin: 0 1rem;
-    list-style-type: "\1F517" ;
+    list-style-type: "\1F517";
+}
+
+.project_link_list_a{
+    margin: 0 0.5rem;
 }
 
 .project_feature{
@@ -427,8 +431,10 @@ button:focus {
 
 .project_feature_list{
     margin: 0 1rem;
-    list-style-type: "\2713";
+    list-style-type: disc;
 }
+
+
 .project_photos {
     display: flex;
     justify-content: space-between; /* Space between the images */
