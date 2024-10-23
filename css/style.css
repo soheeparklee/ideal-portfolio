@@ -380,8 +380,8 @@ button:focus {
   }
 
   .project_top {
-    display: flex;
-    justify-content: space-between; /* Distribute space evenly */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     gap: 1rem; /* Optional: Adds space between the columns */
 }
 
