@@ -86,6 +86,10 @@ button:focus {
     font-weight: 900;
 }
 
+.italic{
+    font-style: italic;
+}
+
 /* Header */
 .header {
     background-color: #050a13;
@@ -469,7 +473,7 @@ button:focus {
     text-align: left;
 }
 
-.project_skills_title {
+.project_title {
     color: var(--color-accent);
     margin: 0;
     font-size: 1.2rem;
@@ -485,4 +489,35 @@ button:focus {
 
 .project_skills_list_item{
     margin: 1rem 0;
+}
+
+/* trouble shooting */
+.project_ts{
+    margin: 1rem 0;
+    background-color: var(--color-primary-variant);
+    filter: brightness(150%);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: left;
+}
+
+
+.project_ts_item{
+    margin: 1rem 0;
+}
+
+.ts_situation{
+    color: red;
+    font-size: 1rem;
+    font-weight: 1000;
+}
+.ts_tried{
+    color: yellow;
+    font-size: 1rem;
+    font-weight: 1000;
+}
+.ts_result{
+    color: green;
+    font-size: 1rem;
+    font-weight: 1000;
 }

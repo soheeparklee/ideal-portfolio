@@ -228,7 +228,10 @@
                 <div class="project_top">
                     <div class="project_left">
                     <div class="project_desc">
-                        <p class="description">Developed an open market service to buy and sell cosmetic products.</p>
+                        <p class="description">Developed an open market service to buy and sell cosmetic products.
+                            Consumers and sellers can independently negotiate prices,
+                            protecting consumers and small business owners from the
+                            monopolization of large corporations.</p>
                         <ul class="project_desc_list">
                             <li><i class="fa-solid fa-user"></i>  &ensp; FrontEnd: 3, Backend:6</li>
                             <li class="dates"><i class="fa-solid fa-calendar-days"></i>  &ensp; May 2024 - July 2024</li>
@@ -294,7 +297,7 @@
                 </div>
                     <!-- skills & trouble shooting -->
                     <div class="project_skills">
-                        <h3 class="project_skills_title"><i class="fa-solid fa-screwdriver-wrench"></i>  Skills and Tools </h3>
+                        <h3 class="project_title"><i class="fa-solid fa-screwdriver-wrench"></i>  Skills and Tools </h3>
                         <ul class="project_skills_list">
                             <li class="project_skills_list_item"> <span class="bold">HTTPS Encryption:</span> Configured Nginx, TLS, Route 53 for HTTPS domain. <br>
                                 Improved data transmission security with encryption and product registration speed reduced to 369ms(before 9.26s).
@@ -313,20 +316,41 @@
                         </ul>
                     </div>
                     <div class="project_ts">
+                        <h3 class="project_title"><i class="fa-solid fa-triangle-exclamation"></i> 
+                            Trouble Shooting
+                            <span class="italic">- Instance connection lost error</span>
+                        </h3>
                         <ul>
-                            <li>
-                                <div><i class="fa-solid fa-triangle-exclamation"></i></div>
-                                <div>Situation</div>
+                            <li class="project_ts_item">
+                                <div class="ts_situation"><i class="fa-solid fa-circle"></i> Situation</div>
+                                <p>After 5 to 6 hours after deployment with nohup, the instance
+                                    connection was lost. <br>
+                                However, Instance on AWS EC2 was running without problem.</p>
                             </li>
-                            <li>
-                                <div><i class="fa-solid fa-star"></i></div>
-                                <div>Tried and Achieved</div>
+                            <li class="project_ts_item">
+                                <div class="ts_tried"><i class="fa-solid fa-circle"></i> Tried and Achieved</div>
+                                <p>
+                                    • Rebooted AWS EC2 instance
+                                    • Rechecked nohup.out file.
+                                    • SWAP
+                                    • Updated for spring cloud in build.gradle file
+                                    • Configured Hakari
+                                </p>
                             </li>
-                            <li>
-                                <div><i class="fa-solid fa-thumbs-up"></i></div>
-                                <div>Result</div>
+                            <li class="project_ts_item">
+                                <div class="ts_result"><i class="fa-solid fa-circle"></i> Result</div>
+                                <p>The cause of the first error was that the degraded version of Spring
+                                    Boot parent and Spring cloud version was not compatible.
+                                    → solved by updating the build.gradle file
+                                    • OOM error
+                                    → allocated 4G of SWAP to prevent memory over commitment
+                                    • The configuration of HikariCP was too long, connections were
+                                    staying in the pool for longer than they should
+                                    → solved by configuring HakariCP MaxLifetime to 30 minutes</p>
                             </li>
                         </ul>
+
+                        
                     </div>
                 </section>
                 <section class="project2"></section>
