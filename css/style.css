@@ -521,3 +521,34 @@ button:focus {
     font-size: 1rem;
     font-weight: 1000;
 }
+
+/* certificate */
+.certificate_comptia{
+    background-color: var(--color-primary-variant);
+    padding: 1rem;
+    color: var(--color-text);
+    border-radius: 1rem;
+    cursor: default;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.38);
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    border: solid 1px black;
+}
+
+.certificate_img img{
+    height: 100px; /* Image will match the height of the right side */
+    width: 100px; /* Preserve the aspect ratio of the image */
+    display: block;
+    margin: 0 1rem;
+}
+
+.certificate_desc{
+    text-align: left;
+    padding: 30px; 
+    margin: 0 1rem;
+}
+
+.certificate_desc h3{
+    color: var(--color-accent);
+}
