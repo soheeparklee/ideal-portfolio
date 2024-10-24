@@ -349,8 +349,46 @@
                                     → solved by configuring HakariCP MaxLifetime to 30 minutes</p>
                             </li>
                         </ul>
-
-                        
+                    </div>
+                    <div class="project_ts">
+                        <h3 class="project_title"><i class="fa-solid fa-triangle-exclamation"></i> 
+                            Trouble Shooting
+                            <span class="italic">- Too many connections error</span>
+                        </h3>
+                        <ul>
+                            <li class="project_ts_item">
+                                <div class="ts_situation"><i class="fa-solid fa-circle"></i> Situation</div>
+                                <p>• After connecting the frontend and backend, there was a 500
+                                    error. <br>
+                                    When several users were trying to access the database, there
+                                    was a Too many connections error.</p>
+                            </li>
+                            <li class="project_ts_item">
+                                <div class="ts_tried"><i class="fa-solid fa-circle"></i> Tried and Achieved</div>
+                                <p>
+                                    • Updated settings CORS error
+                                    • Checked MariaDB settings
+                                    • Calculated rates
+                                    • Too little_number of connection pools: default is 30
+                                    • Too long wait_timeout: default is 28800ms(8h)
+                                    • Reboot MySql server
+                                </p>
+                            </li>
+                            <li class="project_ts_item">
+                                <div class="ts_result"><i class="fa-solid fa-circle"></i> Result</div>
+                                <p>Caculated the rates of Cache Miss Rate(2.40%), Connection Miss
+                                    Rate(17%), and Connection usage(53%).
+                                    → Shortened wait_timeout from 28800ms to 180ms.
+                                    → Increased max_connections from 30 to 300 for Connection usage.
+                                    • The error “Too many connections” no longer appears on server.log.
+                                    • The database works without problems even with many users
+                                    updating at the same time.
+                                    • As more connections were being made, the default options were
+                                    no longer effective.
+                                    • It is important for the application to be flexible and scalable.
+                                </p>
+                            </li>
+                        </ul>
                     </div>
                 </section>
                 <section class="project2"></section>
