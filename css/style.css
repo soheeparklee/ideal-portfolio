@@ -82,6 +82,10 @@ button:focus {
     font-style: italic;
 }
 
+.bold{
+    font-weight: 900;
+}
+
 /* Header */
 .header {
     background-color: #050a13;
@@ -421,18 +425,19 @@ button:focus {
     margin: 0 0.5rem;
 }
 
-.project_feature{
-    background-color: var(--color-primary-variant); /* Optional: Styling */
+/* .project_feature{
+    background-color: var(--color-primary-variant);
     filter: brightness(150%);
     border-radius: 8px;
     padding: 1rem;
     text-align: left;
-}
+} 
+*/
 
-.project_feature_list{
+/* .project_feature_list{
     margin: 0 1rem;
     list-style-type: disc;
-}
+} */
 
 
 .project_photos {
@@ -454,3 +459,26 @@ button:focus {
     padding: 5px;
 }
 
+/* skills */
+.project_skills{
+    margin: 1rem 0;
+    background-color: var(--color-primary-variant);
+    filter: brightness(150%);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: left;
+}
+
+.project_skills_title {
+    color: var(--color-accent);
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+
+.project_skills_list{
+    margin: 0.5rem 1rem;
+    list-style-type: disc;
+    font-size: 1rem;
+    font-weight: 100;
+}
