@@ -387,7 +387,7 @@ button:focus {
     color: var(--color-text);
   }
 
-  .project_top {
+.project_top {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 1rem; /* Optional: Adds space between the columns */
@@ -419,7 +419,7 @@ button:focus {
     margin: 0 0 1rem 0;
 }
 
-.project_link_list{
+.link{
     text-decoration: underline;
     margin: 0 1rem;
     list-style-type: "\1F517";
@@ -551,4 +551,18 @@ button:focus {
 
 .certificate_desc h3{
     color: var(--color-accent);
+}
+
+/* Thesis */
+#thesis{
+    background-color: var(--color-primary-variant);
+    color: var(--color-text);
+  }
+
+.thesis_title{
+    margin: 1rem;
+}
+
+.thesis_desc{
+    display: grid;
 }
