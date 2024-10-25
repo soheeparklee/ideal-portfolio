@@ -536,7 +536,6 @@ button:focus {
     display: flex;
     align-items: stretch;
     justify-content: center;
-    border: solid 1px black;
 }
 
 .certificate_img img{
@@ -559,13 +558,54 @@ button:focus {
 /* Thesis */
 #thesis{
     background-color: var(--color-primary-variant);
-    color: var(--color-text);
+    color: var(--color-text); 
   }
+
+.thesis_container{
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;
+    flex-direction: column;
+}
+
+.title_box{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.title_box img{
+    height: 80px; 
+    width: 80px;
+}
 
 .thesis_title{
     margin: 1rem;
+    font-size: large;
 }
 
 .thesis_desc{
+    max-width: 800px;
     display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.thesis_desc_item{
+    background-color: var(--color-primary-variant);
+    filter: brightness(150%);
+    border-radius: 8px;
+    padding:  0.5rem 2rem;
+    border-radius: 8px;
+    margin: 0.5rem 1rem;
+}
+
+.thesis_desc_item:first-child {
+    grid-column: span 2; /* University name spans across both columns */
+    font-size: 1.2rem; /* Adjust as needed for emphasis */
+    text-align: center; /* Center-align the university name */
+}
+
+.thesis_desc_list{
+    margin: 1rem 0;
+    text-align: left;
 }
