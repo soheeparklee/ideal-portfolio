@@ -445,13 +445,16 @@ button:focus {
 
 
 .project_photos {
-    display: flex;
-    justify-content: space-between; /* Space between the images */
-    gap: 1rem; /* Optional: Adds gap between the boxes */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-items: center;
+    /* display: flex;
+    justify-content: space-between;  */
+    gap: 1rem;
 }
 
 .project_img_box {
-    flex: 1; /* Each box takes equal width */
+    /* flex: 1;  */
     text-align: center; /* Center-align the image and text */
 
 }
