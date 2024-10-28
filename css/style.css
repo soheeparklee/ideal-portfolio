@@ -527,7 +527,7 @@ button:focus {
 
 /* certificate */
 .certificate_comptia{
-    background-color: var(--color-primary-variant);
+    background-color: #3a4252;
     padding: 1rem;
     color: var(--color-text);
     border-radius: 1rem;
@@ -619,9 +619,9 @@ button:focus {
     flex-direction: column;
 }
 .edu_item{
-    width: 800px;
-    background-color: #8a8d91;
-    padding: 1rem;
+    width: 900px;
+    background-color: #9ba3b0;
+    padding: 0 1rem;
     color: var(--color-text);
     border-radius: 1rem;
     cursor: default;
@@ -653,12 +653,12 @@ button:focus {
 
 /* additional skills */
 #experience {
-    background-color: var(--color-primary-variant);
+    background-color: #1a2f4d;
     color: var(--color-text);
   }
 
 .exp_container{
-    background-color: var(--color-primary);
+    background-color: #0c192f;
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -672,7 +672,6 @@ button:focus {
     color: var(--color-text);
     border-radius: 1rem;
     cursor: default;
-    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.38);
     display: flex;
     align-items: stretch;
     justify-content: center;
@@ -691,4 +690,22 @@ button:focus {
 .exp_title{
     font-size: 1.4rem;
     font-weight: bold;
+}
+
+
+/* contact */
+#contact{
+    background-color: var(--color-primary-variant);
+    color: var(--color-text);
+}
+
+.contact_box{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.contact_item{
+    margin: 1rem;
 }
