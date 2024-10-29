@@ -429,6 +429,13 @@ button:focus {
     margin: 0 0.5rem;
 }
 
+.project_link_list_a:hover{
+    color: var(--color-accent);
+    font-size: 1.2rem;
+    transition: font-size 0.3s ease-in-out, color 0.3s  ease-in-out; /* Smooth transition */
+
+}
+
 /* .project_feature{
     background-color: var(--color-primary-variant);
     filter: brightness(150%);
@@ -710,3 +717,13 @@ button:focus {
     margin: 1rem;
 }
 
+.contact_item:hover{
+    color: var(--color-accent);
+}
+
+.contact_link:hover{
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    transition: font-size 0.3s ease-in-out, color 0.3s  ease-in-out; /* Smooth transition */
+
+}
