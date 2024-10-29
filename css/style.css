@@ -200,9 +200,9 @@ button:focus {
   
   .major {
     flex:1;
-    max-width: 200px;
+    max-width: 300px;
     min-width: 150px; 
-    max-height: 200px;
+    max-height: 300px;
     background-color: var(--color-primary-variant);
     padding: 2rem 1rem;
     color: var(--color-text);
@@ -223,6 +223,24 @@ button:focus {
     font-weight: bold;
     margin-bottom: 1rem;
   }
+
+.major__title{
+    line-height: 1.5rem;
+}
+
+.major__hard__detail{
+    line-height: 1.5rem;
+}
+
+.major__soft__detail{
+    line-height: 2rem;
+}
+
+.major__language__detail{
+    line-height: 2rem;
+}
+
+
   
   .major:hover .major__icon {
     transform: rotate(-15deg) scale(1.2);
@@ -284,6 +302,9 @@ button:focus {
   0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
   0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
   0 100px 80px rgba(0, 0, 0, 0.12);
+}
+.skills__tools li{
+    line-height: 2rem;
 }
 
 .skills__language {
