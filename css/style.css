@@ -415,6 +415,7 @@ button:focus {
 }
 
 .project_left, .project_right {
+    margin: 1rem;
     border-radius: 8px;
     flex: 1; /* Each div takes equal width */
     background-color: var(--color-primary-variant); /* Optional: Styling */
@@ -483,7 +484,6 @@ button:focus {
 
 .project_img_box {
     width: 100%; /* Set image boxes to full width of grid column */
-    
     text-align: center; /* Center-align the image and text */
 
 }
@@ -494,6 +494,31 @@ button:focus {
     border-radius: 8px;
     padding: 5px;
 }
+
+@media screen and (max-width: 1187px) {
+    .project_top{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 823px) {
+    .project_top{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .project_photos {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: 1rem;
+        gap: 1rem;
+    }
+}
+    
 
 /* skills */
 .project_skills{
