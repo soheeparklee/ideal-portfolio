@@ -258,7 +258,7 @@ button:focus {
         "coding coding coding" 
         "coding coding coding" 
         "tools language language";
-
+    padding: 1rem;
     gap: 1rem; /* Space between grid items */
     margin: 2rem 0;
     border-radius: 8px;
@@ -267,7 +267,8 @@ button:focus {
         0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
         0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
         0 100px 80px rgba(0, 0, 0, 0.12);
-
+    background-color: var(--color-primary);
+    
   }
   
   .skills__title {
@@ -282,6 +283,7 @@ button:focus {
   padding: 1rem;
   margin: 1rem;
   background-color: var(--color-primary);
+  filter: brightness(150%);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -833,14 +835,27 @@ button:focus {
         line-height: 1.1rem;
     }
 
-
-  
-    .job {
-      justify-content: center;
-    }
   
     .skills {
-      grid-template-columns: 1fr;
+    display: grid;
+    grid-template-areas: 
+        "coding"
+        "tools" 
+        "language";
+    grid-template-columns: 1fr; /* Optional: equal width for each column */
+    gap: 0.5rem;
+    }
+
+    .skills__coding {
+        grid-area: coding;
+    }
+    
+    .skills__tools {
+        grid-area: tools;
+    }
+    
+    .skills__language {
+        grid-area: language;
     }
   
     .categories {
