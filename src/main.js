@@ -1,14 +1,20 @@
 //header
+//dark color background when scrolled down
 const header = document.querySelector('.header');
 const headerHeight= header.getBoundingClientRect().height;
-console.log(headerHeight);
 document.addEventListener('scroll', () => {
-    //when scrolled, make header transparent
-    console.log(window.scrollY);
-    const scrolledHeight= window.scrollY;
-    if( scrolledHeight > headerHeight){
+    if( window.scrollY > headerHeight){
         header.classList.add('header--dark');
     }else{
         header.classList.remove('header--dark');
     }
+})
+
+//home 
+//transparent when scrolled down
+const home= document.querySelector('.home__container');
+const homeHeight= home.offsetHeight;
+document.addEventListener('scroll', ()=> {
+    console.log(1 - window.scrollY / homeHeight);
+    home.style.opacity= 1 - window.scrollY / homeHeight;
 })
