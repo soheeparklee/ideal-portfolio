@@ -52,7 +52,7 @@ button {
 }
 
 button:focus {
-    outline: 1px solid var(--color-accent);
+    outline: 1px solid transparent;
 }
 
 
@@ -124,13 +124,25 @@ button:focus {
   font-size: 1.8rem;
 }
 
+.header__toggle{
+    display: none;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+}
+
+
 .header__menu {
     display: flex;
     gap: 4px;
   }
 
 .header__menu__item {
+  display: block;
   padding: 8px 16px;
+  border: 1px solid transparent;
 }
 
 .header__menu__item:hover {
@@ -148,8 +160,6 @@ button:focus {
         font-size: 1rem;
     }
 }
-
-
 
 /* Home */
 #home {
@@ -806,28 +816,35 @@ button:focus {
 
 /* arrow */
 .arrow-up {
+    opacity: 0;
+}
+
+
+
+.arrow--show{
+    opacity: 1;
     background-color: var(--color-primary);
     position: fixed;
     bottom: 3rem;
     right: 3rem;
     font-size: 3rem;
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 100%;
     text-align: center;
-  }
-
-.arrow-up:hover{
     transition: all 300ms;
-    box-shadow: 5px 5px 0px 0px var(--color-accent);
+}
 
+.arrow--show:hover{
+    transition: all 300ms;
+    box-shadow: 0px 0px 5px 5px var(--color-accent);
 }
 
 /* mediaquery */
 
 @media screen and (max-width: 768px) {
 .section {
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
 }
 
 .title {
@@ -839,41 +856,71 @@ button:focus {
 }
 
     .header {
-      flex-direction: column;
-      align-items: start;
+    flex-direction: column;
+    align-items: start;
+    background-color: var(--color-primary);
     }
-  
+
     .header__menu {
-      flex-direction: column;
-      text-align: center;
-      padding: 1rem 4rem;
-      gap: 1rem;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem 4rem;
+    gap: 1rem;
+    animation: fadeInOut 1s ease-in-out;
+}
+
+
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0;
+            display: none;
+        }
+    
+        50% {
+            opacity: 0.5;
+            display: flex;
+        }
+    
+        100% {
+            opacity: 1;
+            display: flex;
+        }
     }
-  
+
+    .header__menu.open{
+        display: flex;
+    }
+
+    .header__toggle{
+        display: block;
+    }
+
+
     .header__nav {
-      width: 100%;
+    width: 100%;
     }
 
     .header__logo__title{
         font-size: 1.8rem;
     }
-  
+
     #home {
-      padding-bottom: 3rem;
+    padding-bottom: 3rem;
     }
-  
+
     .home__title {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
     }
-  
+
     .majors {
-      flex-direction: row;
-      align-items: center;
+    flex-direction: row;
+    align-items: center;
     }
-  
+
     .major {
-      width: 250px;
+    width: 250px;
     }
 
     .major__hard__detail{
@@ -881,7 +928,6 @@ button:focus {
         line-height: 1.1rem;
     }
 
-  
     .skills {
     display: grid;
     grid-template-areas: 
@@ -903,13 +949,13 @@ button:focus {
     .skills__language {
         grid-area: language;
     }
-  
+
     .categories {
-      flex-direction: column;
+    flex-direction: column;
     }
-  
+
     .category {
-      width: 100%;
+    width: 100%;
     }
 
     .certificate_comptia{
@@ -940,16 +986,15 @@ button:focus {
     .exp_img img{
         
         margin: 0.5rem 1rem;
-     
     }
 
 
-    .arrow-up {
-      font-size: 2rem;
-      width: 3rem;
-      height: 3rem;
-      bottom: 1.5rem;
-      right: 1.5rem;
+    .arrow_up {
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
     }
-  }
-  
+}
+
