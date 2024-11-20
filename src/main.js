@@ -1,3 +1,5 @@
+'use scrict';
+
 //header
 //dark color background when scrolled down
 const header = document.querySelector('.header');
