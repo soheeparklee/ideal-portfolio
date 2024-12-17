@@ -6,8 +6,8 @@ const sectionIds = [
 '#skills', 
 '#projects', 
 '#thesis', 
-'#certificate', 
 '#education', 
+// '#certificate', 
 '#experience', 
 '#contact'
 ];

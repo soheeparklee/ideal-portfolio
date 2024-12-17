@@ -178,6 +178,7 @@ button:focus {
     padding: 5rem 1rem;
     padding-top: 7rem;
     text-align: center;
+    position: relative; 
   }
   
   .home__avatar {
@@ -217,6 +218,30 @@ button:focus {
     outline: 2px solid var(--color-accent);
   }
   
+
+/* divider */
+.home__divider {
+    background-color: var(--color-primary);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.home__divider svg {
+    background-color: var(--color-primary);
+    position: relative;
+    display: block;
+    width: calc(101% + 1.3px);
+    height: 83px;
+}
+
+.home__divider .shape-fill {
+    fill: #ffffff;
+}
 
 /* About */
 .introduction__bold{
@@ -284,6 +309,7 @@ button:focus {
 #skills {
     background-color: var(--color-primary-variant);
     color: var(--color-text);
+    position: relative;
   }
   
   .skills {
@@ -436,10 +462,31 @@ button:focus {
     font-style: italic;
 }
 
+.skills__divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.skills__divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 66px;
+}
+
+.skills__divider .shape-fill {
+    fill: var(--color-black);
+}
+
 /* projects */
 #projects {
     background-color: var(--color-primary);
     color: var(--color-text);
+    position: relative;
   }
 
 .project_top {
@@ -580,6 +627,27 @@ button:focus {
 
 .project_skills_list_item{
     margin: 1rem 0;
+}
+
+.project__divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.project__divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+}
+
+.project__divider .shape-fill {
+    fill: var(--color-primary-variant);
 }
 
 /* trouble shooting */
@@ -791,11 +859,11 @@ button:focus {
     font-weight: bold;
 }
 
-
 /* contact */
 #contact{
     background-color: var(--color-primary-variant);
     color: var(--color-text);
+    position: relative;
 }
 
 .contact_box{
@@ -812,14 +880,33 @@ button:focus {
 .contact_item:hover{
     color: var(--color-accent);
     transition: font-size 0.3s ease-in-out, color 0.3s  ease-in-out; /* Smooth transition */
-
 }
 
 .contact_link:hover{
     color: var(--color-accent);
     font-size: 1.5rem;
     transition: font-size 0.3s ease-in-out, color 0.3s  ease-in-out; /* Smooth transition */
+}
 
+.contact__divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.contact__divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 41px;
+}
+
+.contact__divider .shape-fill {
+    fill: #1a2f4d;
 }
 
 /* arrow */
