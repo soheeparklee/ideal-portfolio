@@ -1,22 +1,55 @@
 'use scrict';
 
-const skillContainer= document.getElementById('skills');
-const skillsBtn= document.querySelector('a[href="#skills"]');
+const sectionIds = [
+'#home', 
+'#introduction', 
+'#skills', 
+'#projects', 
+'#thesis', 
+'#certificate', 
+'#education', 
+'#experience', 
+'#contact'
+];
 
-function handleIntersection(entries) {
-    // The callback will return an array of entries, even if you are only observing a single item
-    entries.map((entry) => {
-    if (entry.isIntersecting) {
-        skillsBtn.classList.add('visible')
-    } else {
-        skillsBtn.classList.remove('visible')
-    }
-    });
+const sections= sectionIds.map((id)=> document.querySelector(id));
+const navItems= sectionIds.map((id)=> document.querySelector(`[href="${id}"]`));
+const visibleSections= sectionIds.map(()=>false);
+let activeNavItem = navItems[0];
+
+const options = {
+    rootMargin: '-20% 0px 0px 0px',
+    threshold: [0, 0.98],
+    };
+
+const observer = new IntersectionObserver(observerCallback, options);
+sections.forEach((section) => observer.observe(section));
+
+function observerCallback(entries) {
+    let selectLastOne; //무조건 contact를 선택해야 하는지 아닌지
+    entries.forEach((entry) =>{
+            const index = sectionIds.indexOf(`#${entry.target.id}`);
+            visibleSections[index] = entry.isIntersecting; 
+
+            selectLastOne = 
+                index === sectionIds.length -1 &&
+                entry.isIntersecting &&
+                entry.intersectionRatio >= 0.95;
+        });  
+    const navIndex = selectLastOne ? sectionIds.length - 1 : findFirstIntersecting(visibleSections);
+    selectNavItem(navIndex);
 }
 
-// Next we instantiate the observer with the function we created above. This takes an optional configuration
-// object that we will use in the other examples.
-const observer = new IntersectionObserver(handleIntersection);
 
-// Finally start observing the target element
-observer.observe(skillContainer);
+function findFirstIntersecting(visibleSections){
+    const index = visibleSections.indexOf(true);
+    return index >= 0 ? index : 0;
+}
+
+function selectNavItem(index){
+    const navItem = navItems[index];
+    if(!navItem) return;
+    activeNavItem.classList.remove('active');
+    activeNavItem = navItem;
+    activeNavItem.classList.add('active');
+}
